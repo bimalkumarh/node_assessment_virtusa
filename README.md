@@ -3,6 +3,7 @@
 
 - The package is configured to use TypeScript instead of JavaScript.
 - Run npm install for package installation
+- Unit testing is not incorporated
 
 ### Commands supported
 - Run the server in development mode: npm run start:dev
