@@ -14,7 +14,7 @@ class Express {
     }
 
     private mountMiddlewares(): void {
-        Bootstrap.init(this.express)
+        Bootstrap.init(this.express);
     }
 
     private mountRoutes(): void {

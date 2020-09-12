@@ -9,13 +9,13 @@ const options = commandLineArgs([
     {
         name: 'testFile',
         alias: 'f',
-        type: String,
-    },
+        type: String
+    }
 ]);
 
 // Set the env file
 const result2 = dotenv.config({
-    path: `./env/test.env`,
+    path: `./env/test.env`
 });
 if (result2.error) {
     throw result2.error;
@@ -29,9 +29,9 @@ jasmine.loadConfig({
     random: true,
     spec_dir: 'spec',
     spec_files: [
-        './**/*.spec.ts',
+        './**/*.spec.ts'
     ],
-    stopSpecOnExpectationFailure: false,
+    stopSpecOnExpectationFailure: false
 });
 
 // On complete callback function

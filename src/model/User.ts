@@ -11,7 +11,7 @@ class User {
                 lastName: 'MICHAEL000',
                 clientId: '9994567'
             };
-            return response
+            return response;
         } else if (data === 'JOHN0000MICHAEL0009994567' && version === 'v2') {
             Logger.info('data correct v2');
             response = {
@@ -27,4 +27,4 @@ class User {
     }
 }
 
-export default new User()
+export default new User();

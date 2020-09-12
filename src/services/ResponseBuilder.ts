@@ -12,7 +12,7 @@ class ResponseBuilder {
         this.response = {
             statusCode: this.statusCode,
             data: this.data
-        }
+        };
     }
 
     public success() {

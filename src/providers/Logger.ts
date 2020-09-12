@@ -4,14 +4,14 @@ import 'winston-daily-rotate-file';
 const { Console } = winston.transports;
 
 const logger = winston.createLogger({
-    level: 'info',
+    level: 'info'
 });
 
 if (process.env.NODE_ENV === 'production') {
 
     const fileFormat = winston.format.combine(
         winston.format.timestamp(),
-        winston.format.json(),
+        winston.format.json()
     );
     const errTransport = new winston.transports.DailyRotateFile({
         filename: 'error_%DATE%.log',
@@ -49,11 +49,10 @@ if (process.env.NODE_ENV === 'production') {
         format: winston.format.combine(
             winston.format.colorize(),
             winston.format.simple(),
-            errorStackFormat(),
-        ),
+            errorStackFormat()
+        )
     });
     logger.add(consoleTransport);
 }
-
 
 export default logger;
