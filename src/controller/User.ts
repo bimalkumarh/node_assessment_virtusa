@@ -16,12 +16,12 @@ class User {
             if (user) {
                 rb.statusCode = http_status_codes.OK;
                 rb.data = user;
-                return res.json(rb.success()).status(http_status_codes.OK);
+                return res.status(http_status_codes.OK).json(rb.success());
             } else {
-                return res.json(rb.bad_request()).status(http_status_codes.BAD_REQUEST);
+                return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
             }
         } else {
-            return res.json(rb.bad_request()).status(http_status_codes.BAD_REQUEST);
+            return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
         }
     }
     public parseV2(req: Request, res: Response, next: NextFunction) {
@@ -34,13 +34,13 @@ class User {
             if (user) {
                 rb.statusCode = http_status_codes.OK;
                 rb.data = user;
-                return res.json(rb.success()).status(http_status_codes.OK);
+                return res.status(http_status_codes.OK).json(rb.success());
             } else {
-                return res.json(rb.bad_request()).status(http_status_codes.BAD_REQUEST);
+                return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
             }
 
         } else {
-            return res.json(rb.bad_request()).status(http_status_codes.BAD_REQUEST);
+            return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
         }
     }
 }
