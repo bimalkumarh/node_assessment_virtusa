@@ -12,7 +12,7 @@ if (cluster.isMaster) {
     CPUS.forEach(() => cluster.fork());
 
     NativeEvent.cluster(cluster);
-    
+
 } else {
 
     App.loadServer();

@@ -1,7 +1,7 @@
 import { Application } from 'express';
 import apiRoutes from '@routes/Api';
 
-class Routes {   
+class Routes {
 
     public mountApiRoutes(express: Application) {
         return express.use('/api',apiRoutes);

@@ -1,20 +1,21 @@
 import Logger from '@providers/Logger';
 
 class User {
-    public parse(data: String, version: String) {
+    public parse(data: string, version: string) {
         Logger.info(`${data} ${version}`);
+        let response ;
         if (data === 'JOHN0000MICHAEL0009994567' && version === 'v1') {
-            let response = {
+            response = {
                 statusCode: 200,
                 data: {
-                    firstName: "JOHN0000",
-                    lastName: "MICHAEL000",
-                    clientId: "9994567"
+                    firstName: 'JOHN0000',
+                    lastName: 'MICHAEL000',
+                    clientId: '9994567'
                 }
             };
             return response
         } else if (data === 'JOHN0000MICHAEL0009994567' && version === 'v2') {
-            let response = {
+            response = {
                 statusCode: 200,
                 data: {
                     firstName: 'JOHN',

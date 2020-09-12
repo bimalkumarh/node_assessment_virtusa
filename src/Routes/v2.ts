@@ -5,9 +5,8 @@ const router = Router();
 
 router.post('/parse', UserController.parseV2);
 
-router.get('/test', (req,res)=>{
+/*router.get('/test', (req,res)=>{
     res.send('v2');
-});
-
+});*/
 
 export default router;
