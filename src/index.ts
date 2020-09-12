@@ -13,7 +13,6 @@ if (cluster.isMaster) {
 
     NativeEvent.cluster(cluster);
 
-    
 } else {
 
     App.loadServer();

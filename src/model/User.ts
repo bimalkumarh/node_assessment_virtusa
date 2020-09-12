@@ -5,7 +5,7 @@ class User {
         Logger.info(`${data} ${version}`);
         let response ;
         if (data === 'JOHN0000MICHAEL0009994567' && version === 'v1') {
-            Logger.info("data correct v1");
+            Logger.info('data correct v1');
             response = {
                 firstName: 'JOHN0000',
                 lastName: 'MICHAEL000',
@@ -13,7 +13,7 @@ class User {
             };
             return response
         } else if (data === 'JOHN0000MICHAEL0009994567' && version === 'v2') {
-            Logger.info("data correct v2");
+            Logger.info('data correct v2');
             response = {
                 firstName: 'JOHN',
                 lastName: 'MICHAEL',
@@ -21,10 +21,10 @@ class User {
             };
             return response;
         } else {
-            Logger.info("data incorrect");
+            Logger.info('data incorrect');
             return false;
         }
     }
 }
 
-export default new User();
+export default new User()

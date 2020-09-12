@@ -8,7 +8,7 @@ class ResponseBuilder {
 
     constructor() {
         this.statusCode = http_status_codes.OK;
-        this.data = "";
+        this.data = '';
         this.response = {
             statusCode: this.statusCode,
             data: this.data
@@ -28,7 +28,7 @@ class ResponseBuilder {
         this.statusCode = http_status_codes.BAD_REQUEST;
         this.response = {
             statusCode: this.statusCode,
-            data: ""
+            data: ''
         };
 
         return this.response;

@@ -28,13 +28,6 @@ class NativeEvent {
 		process.on('warning', (warning) =>
 			Logger.warn(warning.stack)
 		);
-
-		process.on('message', function(message) {
-			Logger.info(`Message on process ${message}`)
-			if(message.type === 'shutdown') {
-				process.exit(0);
-			}
-		});
 	}
 }
 

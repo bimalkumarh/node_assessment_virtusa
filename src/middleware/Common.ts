@@ -7,7 +7,7 @@ import Logger from '@providers/Logger';
 import ResponseBuilder from '@services/ResponseBuilder';
 
 class Common {
-    public static mount(_express: express.Application) {     
+    public static mount(_express: express.Application) {
 
         Logger.info('Mounted common middleware');
 
