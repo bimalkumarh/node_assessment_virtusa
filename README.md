@@ -12,6 +12,6 @@
 - Run production build with a different env file npm start -- --env="name of env file" (default is production)
 - To run unit test case: npm run test
 
-### Status Monitor
+### Status Monitor and Swagger
 http://<BASE_URL>:<PORT>/status-monitor
 http://<BASE_URL>:<PORT>/swagger
