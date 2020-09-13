@@ -12,6 +12,7 @@
     "strict": true,
     "target": "es6",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "paths": {
       "@providers/*": [
         "src/providers/*"
@@ -41,7 +42,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "spec/**/*.ts"
+    "spec/**/*.ts", 
+    "Swagger.ts"
   ],
   "exclude": [
     "src/public/"
