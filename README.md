@@ -1,5 +1,5 @@
 # Node Assessment
-### Node.js typescript framework for Assessment by virtusa
+### Node.js typescript framework for Assessment by Virtusa
 
 - The package is configured to use TypeScript instead of JavaScript.
 - Run npm install for package installation
@@ -14,3 +14,4 @@
 
 ### Status Monitor
 http://<BASE_URL>:<PORT>/status-monitor
+http://<BASE_URL>:<PORT>/swagger
