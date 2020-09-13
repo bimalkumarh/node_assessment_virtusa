@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import UserModel from '@model/User';
 import Logger from '@providers/Logger';
 import ResponseBuilder from '@services/ResponseBuilder';
-import * as http_status_codes from 'http-status-codes';
+import * as httpStatusCodes from 'http-status-codes';
 
 class User {
     public parseV1(req: Request, res: Response, next: NextFunction) {
@@ -14,14 +14,14 @@ class User {
             const user = UserModel.parse(data.trim(), 'v1');
 
             if (user) {
-                rb.statusCode = http_status_codes.OK;
+                rb.statusCode = httpStatusCodes.OK;
                 rb.data = user;
-                return res.status(http_status_codes.OK).json(rb.success());
+                return res.status(httpStatusCodes.OK).json(rb.ok());
             } else {
-                return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
+                return res.status(httpStatusCodes.BAD_REQUEST).json(rb.badRequest());
             }
         } else {
-            return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
+            return res.status(httpStatusCodes.BAD_REQUEST).json(rb.badRequest());
         }
     }
     public parseV2(req: Request, res: Response, next: NextFunction) {
@@ -32,15 +32,14 @@ class User {
         if (data) {
             const user = UserModel.parse(data.trim(), 'v2');
             if (user) {
-                rb.statusCode = http_status_codes.OK;
                 rb.data = user;
-                return res.status(http_status_codes.OK).json(rb.success());
+                return res.status(httpStatusCodes.OK).json(rb.ok());
             } else {
-                return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
+                return res.status(httpStatusCodes.BAD_REQUEST).json(rb.badRequest());
             }
 
         } else {
-            return res.status(http_status_codes.BAD_REQUEST).json(rb.bad_request());
+            return res.status(httpStatusCodes.BAD_REQUEST).json(rb.badRequest());
         }
     }
 }

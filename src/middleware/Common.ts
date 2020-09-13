@@ -27,7 +27,7 @@ class Common {
         }
 
         _express.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-            res.status(BAD_REQUEST).json(rb.bad_request());
+            res.status(BAD_REQUEST).json(rb.badRequest());
         });
 
         return _express;
