@@ -11,7 +11,7 @@
 - Build the project for production: npm run build.
 - Run the production build: npm start.
 - Run production build with a different env file npm start -- --env="name of env file" (default is production)
-- To run unit tese case: npm run test
+- To run unit test case: npm run test
 
 ### Status Monitor
 http://<BASE_URL>:<PORT>/status-monitor

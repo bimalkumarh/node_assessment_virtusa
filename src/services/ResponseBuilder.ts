@@ -1,4 +1,4 @@
-import * as http_status_codes from 'http-status-codes';
+import * as httpStatusCodes from 'http-status-codes';
 
 class ResponseBuilder {
 
@@ -7,7 +7,7 @@ class ResponseBuilder {
     private response: object;
 
     constructor() {
-        this.statusCode = http_status_codes.OK;
+        this.statusCode = httpStatusCodes.OK;
         this.data = '';
         this.response = {
             statusCode: this.statusCode,
@@ -15,17 +15,18 @@ class ResponseBuilder {
         };
     }
 
-    public success() {
+    public ok() {        
+        this.statusCode = httpStatusCodes.OK;
         this.response = {
             statusCode: this.statusCode,
             data: this.data
-        };
+        };        
 
         return this.response;
     }
 
-    public bad_request() {
-        this.statusCode = http_status_codes.BAD_REQUEST;
+    public badRequest() {
+        this.statusCode = httpStatusCodes.BAD_REQUEST;
         this.response = {
             statusCode: this.statusCode,
             data: ''
